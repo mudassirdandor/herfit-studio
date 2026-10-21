@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://herfitstudio.com/sitemap.xml
