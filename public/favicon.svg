@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
-  <rect width="48" height="48" rx="14" fill="#C77C86"/>
-  <text x="24" y="32" font-family="'DM Serif Display', Georgia, serif" font-size="28" font-weight="bold" fill="#FFFDF9" text-anchor="middle">H</text>
-  <circle cx="36" cy="14" r="4" fill="#B89568"/>
+  <rect width="48" height="48" rx="14" fill="#53695B"/>
+  <text x="24" y="32" font-family="'DM Serif Display', Georgia, serif" font-size="28" font-weight="bold" fill="#F8F5EF" text-anchor="middle">H</text>
+  <circle cx="36" cy="14" r="4" fill="#B8757F"/>
 </svg>

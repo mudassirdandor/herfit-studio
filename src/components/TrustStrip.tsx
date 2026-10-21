@@ -5,22 +5,22 @@ export const TrustStrip = () => {
   const getIcon = (type: string) => {
     switch (type) {
       case 'privacy':
-        return <ShieldCheck className="w-5 h-5 text-[var(--sage)]" aria-hidden="true" />;
+        return <ShieldCheck className="w-5 h-5 text-[var(--olive)]" aria-hidden="true" />;
       case 'trainers':
-        return <Users className="w-5 h-5 text-[var(--sage)]" aria-hidden="true" />;
+        return <Users className="w-5 h-5 text-[var(--olive)]" aria-hidden="true" />;
       case 'hours':
-        return <Clock className="w-5 h-5 text-[var(--sage)]" aria-hidden="true" />;
+        return <Clock className="w-5 h-5 text-[var(--olive)]" aria-hidden="true" />;
       case 'whatsapp':
-        return <MessageCircle className="w-5 h-5 text-[var(--sage)]" aria-hidden="true" />;
+        return <MessageCircle className="w-5 h-5 text-[var(--olive)]" aria-hidden="true" />;
       default:
-        return <ShieldCheck className="w-5 h-5 text-[var(--sage)]" aria-hidden="true" />;
+        return <ShieldCheck className="w-5 h-5 text-[var(--olive)]" aria-hidden="true" />;
     }
   };
 
   return (
     <aside
       aria-label="Key Studio Commitments"
-      className="bg-[var(--surface-sage)] text-[var(--ink)] py-6 sm:py-7 border-y border-[var(--line)] transition-colors"
+      className="bg-[var(--surface-stone)]/50 text-[var(--ink)] py-6 sm:py-7 border-y border-[var(--line)] transition-colors"
     >
       <div className="max-w-[1160px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-0">

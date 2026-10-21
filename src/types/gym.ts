@@ -58,6 +58,9 @@ export interface HeroSectionConfig {
   stats: HeroStat[];
   badge: HeroBadge;
   imageAlt: string;
+  videoUrl?: string;
+  videoPosterUrl?: string;
+  videoRequirementNote?: string;
 }
 
 export interface TrustPoint {
@@ -166,6 +169,8 @@ export interface PricingConfig {
   title: string;
   admissionFeeNotice: string;
   discountNote: string;
+  quarterlyDiscountPercent: number;
+  quarterlyDiscountNotice: string;
   plans: PricingPlan[];
 }
 
@@ -192,16 +197,39 @@ export interface ReviewItem {
   roleTag: string;
   avatarLetter: string;
   avatarColor: string;
-  rating: number;
+  rating?: number;
   comment: string;
+  scenarioTitle?: string;
 }
 
 export interface ReviewsConfig {
   kicker: string;
   title: string;
-  googleRating: string;
-  reviewsCount: string;
+  subtitle: string;
+  disclaimer: string;
   reviews: ReviewItem[];
+}
+
+export interface GalleryItem {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  imagePath: string;
+  imageAlt: string;
+  spanClass?: string;
+}
+
+export interface GalleryConfig {
+  kicker: string;
+  title: string;
+  subtitle: string;
+  items: GalleryItem[];
+}
+
+export interface PortfolioDisclosure {
+  enabled: boolean;
+  text: string;
 }
 
 export interface FaqItem {
@@ -235,6 +263,7 @@ export interface GymConfig {
   trustPoints: TrustPoint[];
   benefits: BenefitsSectionConfig;
   programs: ProgramsSectionConfig;
+  gallery: GalleryConfig;
   schedule: ScheduleConfig;
   timings: TimingsConfig;
   bmi: BmiConfig;
@@ -243,4 +272,5 @@ export interface GymConfig {
   reviews: ReviewsConfig;
   faq: FaqConfig;
   booking: BookingConfig;
+  portfolioDisclosure: PortfolioDisclosure;
 }

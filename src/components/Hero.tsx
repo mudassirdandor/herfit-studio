@@ -68,9 +68,9 @@ export const Hero = () => {
               {gymConfig.hero.stats.map((stat, idx) => (
                 <div
                   key={idx}
-                  className="bg-[var(--surface)] border border-[var(--line)] rounded-2xl p-3.5 sm:p-4 shadow-sm hover:border-[var(--rose)]/30 transition-colors"
+                  className="bg-[var(--surface)] border border-[var(--line)] rounded-2xl p-3.5 sm:p-4 shadow-xs hover:border-[var(--olive)]/40 transition-colors"
                 >
-                  <b className="block font-serif text-2xl sm:text-3xl text-[var(--champagne)] font-normal leading-none mb-1.5">
+                  <b className="block font-serif text-2xl sm:text-3xl text-[var(--olive)] font-normal leading-none mb-1.5">
                     {stat.value}
                   </b>
                   <span className="text-xs sm:text-[13px] text-[var(--muted)] leading-snug block">
@@ -81,22 +81,45 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Right Hero Visual Card */}
+          {/* Right Hero Visual Card with Video-Ready Architecture */}
           <div className="lg:col-span-5 relative mt-4 lg:mt-0">
-            <div className="relative rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-xl border border-[var(--line)] bg-[var(--surface2)]">
+            <div className="relative rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-elevated border border-[var(--line)] bg-[var(--surface-stone)]">
+              {gymConfig.hero.videoUrl ? (
+                /* Video-Led Playback with Accessible Fallback */
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  poster={gymConfig.hero.videoPosterUrl || heroGymImg}
+                  className="w-full aspect-[4/3] object-cover object-center motion-reduce:hidden"
+                  aria-label={gymConfig.hero.imageAlt}
+                >
+                  <source src={gymConfig.hero.videoUrl} type="video/mp4" />
+                  <img
+                    src={heroGymImg}
+                    alt={gymConfig.hero.imageAlt}
+                    className="w-full aspect-[4/3] object-cover object-center"
+                  />
+                </video>
+              ) : null}
+
+              {/* High-Fidelity Photograph (Default & Reduced-Motion Fallback) */}
               <img
                 src={heroGymImg}
                 alt={gymConfig.hero.imageAlt}
                 width={600}
                 height={450}
-                className="w-full aspect-[4/3] object-cover object-center transform transition-transform duration-500 hover:scale-102"
+                className={`w-full aspect-[4/3] object-cover object-center transform transition-transform duration-700 hover:scale-102 ${
+                  gymConfig.hero.videoUrl ? 'hidden motion-reduce:block' : 'block'
+                }`}
                 loading="eager"
                 fetchPriority="high"
               />
 
               {/* Floating Free Trial Badge */}
               <div
-                className="absolute left-3.5 bottom-3.5 sm:left-5 sm:bottom-5 bg-[var(--surface)]/95 backdrop-blur-md rounded-2xl p-3 sm:p-4 shadow-lg border border-[var(--line)] flex items-start gap-3 max-w-[280px]"
+                className="absolute left-3.5 bottom-3.5 sm:left-5 sm:bottom-5 bg-[var(--surface)]/95 backdrop-blur-md rounded-2xl p-3 sm:p-4 shadow-card border border-[var(--line)] flex items-start gap-3 max-w-[280px]"
                 role="note"
                 aria-label="Special promotion offer"
               >

@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { TrustStrip } from './components/TrustStrip';
 import { Benefits } from './components/Benefits';
 import { Programs } from './components/Programs';
+import { Gallery } from './components/Gallery';
 import { Schedule } from './components/Schedule';
 import { TimingsAndBmi } from './components/TimingsAndBmi';
 import { Pricing } from './components/Pricing';
@@ -46,7 +47,10 @@ export function App() {
         {/* 6. Programs & Classes Showcase */}
         <Programs />
 
-        {/* 7. Weekly Class Schedule with Day Tabs */}
+        {/* 7. Dedicated Fitness Photo Gallery ("Inside HerFit") */}
+        <Gallery />
+
+        {/* 8. Weekly Class Schedule with Day Tabs */}
         <Schedule />
 
         {/* 8. Studio Timings & Client-Side BMI Calculator */}

@@ -41,15 +41,15 @@ export const Programs = () => {
             return (
               <article
                 key={program.id}
-                className={`flex flex-col bg-[var(--surface)] rounded-3xl overflow-hidden border transition-all duration-200 hover:-translate-y-1 hover:shadow-md ${
+                className={`flex flex-col bg-[var(--surface)] rounded-3xl overflow-hidden border transition-all duration-200 hover:-translate-y-1 hover:shadow-card ${
                   isFeatured
-                    ? 'border-2 border-[var(--rose)]/35 shadow-sm ring-1 ring-[var(--rose)]/15'
+                    ? 'border-2 border-[var(--olive)]/35 shadow-sm ring-1 ring-[var(--olive)]/15'
                     : 'border-[var(--line)] shadow-xs'
                 }`}
               >
                 {/* Optional Program Image */}
                 {program.imagePath ? (
-                  <div className="relative aspect-[16/10] overflow-hidden bg-[var(--surface2)]">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-[var(--surface-stone)]">
                     <img
                       src={program.imagePath}
                       alt={program.imageAlt || program.title}
@@ -66,18 +66,18 @@ export const Programs = () => {
                   /* Editorial Header for Typographic Cards */
                   <div
                     className={`p-6 pb-0 flex items-center justify-between ${
-                      isFeatured ? 'bg-[var(--rose-soft)]/40 pb-4' : ''
+                      isFeatured ? 'bg-[var(--surface-stone)]/40 pb-4' : ''
                     }`}
                   >
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-lg bg-[var(--surface-sage)] text-[var(--sage)] flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-lg bg-[var(--surface-stone)] text-[var(--olive)] flex items-center justify-center">
                         <Activity className="w-4 h-4" aria-hidden="true" />
                       </div>
-                      <span className="text-xs font-bold uppercase tracking-wider text-[var(--rose)]">
+                      <span className="text-xs font-bold uppercase tracking-wider text-[var(--olive)]">
                         {program.category}
                       </span>
                     </div>
-                    <span className="text-[11px] font-bold tracking-wider uppercase bg-[var(--surface2)] text-[var(--muted)] px-2.5 py-1 rounded-full border border-[var(--line)]">
+                    <span className="text-[11px] font-bold tracking-wider uppercase bg-[var(--surface-stone)] text-[var(--muted)] px-2.5 py-1 rounded-full border border-[var(--line)]">
                       {program.scheduleBadge}
                     </span>
                   </div>
@@ -89,11 +89,11 @@ export const Programs = () => {
                     {/* Tags for photo cards */}
                     {program.imagePath && (
                       <div className="flex flex-wrap items-center gap-2 mb-3">
-                        <span className="text-xs font-bold text-[var(--rose)] bg-[var(--rose-soft)] px-2.5 py-0.5 rounded-full">
+                        <span className="text-xs font-bold text-[var(--olive)] bg-[var(--surface-stone)] px-2.5 py-0.5 rounded-full">
                           {program.category}
                         </span>
                         {program.intensity && (
-                          <span className="text-xs font-medium text-[var(--muted)] bg-[var(--surface2)] px-2.5 py-0.5 rounded-full">
+                          <span className="text-xs font-medium text-[var(--muted)] bg-[var(--surface-stone)]/60 px-2.5 py-0.5 rounded-full">
                             {program.intensity}
                           </span>
                         )}
@@ -115,7 +115,7 @@ export const Programs = () => {
                             key={idx}
                             className="flex items-center gap-2 text-xs text-[var(--ink)] font-medium"
                           >
-                            <Check className="w-3.5 h-3.5 text-[var(--rose)] shrink-0" aria-hidden="true" />
+                            <Check className="w-3.5 h-3.5 text-[var(--olive)] shrink-0" aria-hidden="true" />
                             <span>{h}</span>
                           </div>
                         ))}
@@ -130,7 +130,7 @@ export const Programs = () => {
                     </span>
                     <a
                       href="#book"
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--rose)] hover:text-[var(--rose-hover)] transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--olive)] hover:text-[var(--rose)] transition-colors"
                       aria-label={`Inquire about ${program.title} trial class`}
                     >
                       <span>Try Free</span>
@@ -144,9 +144,9 @@ export const Programs = () => {
         </div>
 
         {/* Bottom Conversion Invitation Strip */}
-        <div className="mt-12 sm:mt-16 bg-[var(--surface)] border border-[var(--line)] rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-12 sm:mt-16 bg-[var(--surface)] border border-[var(--line)] rounded-3xl p-6 sm:p-8 shadow-card flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4 text-center md:text-left">
-            <div className="w-12 h-12 rounded-2xl bg-[var(--rose-soft)] text-[var(--rose)] flex items-center justify-center shrink-0 hidden sm:flex">
+            <div className="w-12 h-12 rounded-2xl bg-[var(--surface-stone)] text-[var(--olive)] flex items-center justify-center shrink-0 hidden sm:flex border border-[var(--line)]">
               <Sparkles className="w-6 h-6" aria-hidden="true" />
             </div>
             <div>

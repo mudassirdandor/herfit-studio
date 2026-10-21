@@ -2,7 +2,7 @@ import { gymConfig, buildWhatsAppLink } from '../config/gym';
 import { ArrowUp, MessageCircle, MapPin, Clock } from 'lucide-react';
 
 export const Footer = () => {
-  const { identity, contact, hours, navigation } = gymConfig;
+  const { identity, contact, hours, navigation, portfolioDisclosure } = gymConfig;
   const currentYear = new Date().getFullYear();
 
   const generalWhatsAppUrl = buildWhatsAppLink(
@@ -16,12 +16,22 @@ export const Footer = () => {
       className="bg-[var(--surface)] border-t border-[var(--line)] pt-12 pb-24 sm:pb-16 text-[var(--muted)] text-sm transition-colors"
     >
       <div className="max-w-[1160px] mx-auto px-4 sm:px-6">
+        {/* Portfolio Demo Disclosure Banner */}
+        {portfolioDisclosure?.enabled && (
+          <div className="mb-8 p-3.5 rounded-xl bg-[var(--surface-stone)]/40 border border-[var(--line)] text-center text-xs text-[var(--muted)]">
+            <p className="m-0 leading-relaxed font-medium">
+              🏛️ <strong className="font-semibold text-[var(--ink)]">Portfolio Demonstration: </strong>
+              {portfolioDisclosure.text}
+            </p>
+          </div>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 mb-10">
           
           {/* Column 1: Brand & Positioning */}
           <div className="md:col-span-5">
             <div className="flex items-center gap-2.5 mb-3.5">
-              <span className="w-8 h-8 rounded-lg bg-[var(--rose)] text-white flex items-center justify-center font-serif text-lg font-bold">
+              <span className="w-8 h-8 rounded-lg bg-[var(--olive)] text-white flex items-center justify-center font-serif text-lg font-bold">
                 H
               </span>
               <span className="font-serif text-xl font-bold text-[var(--ink)]">
@@ -31,7 +41,7 @@ export const Footer = () => {
             <p className="text-xs sm:text-sm text-[var(--muted)] leading-relaxed max-w-sm mb-4">
               100% women-only fitness boutique studio serving Quetta with female fitness trainers, complete privacy, group aerobics, yoga, and customized weight loss programs.
             </p>
-            <span className="inline-block text-xs font-semibold text-[var(--ink)] bg-[var(--surface-sage)] border border-[var(--line)] px-3 py-1 rounded-full">
+            <span className="inline-block text-xs font-semibold text-[var(--olive)] bg-[var(--surface-stone)] border border-[var(--line)] px-3 py-1 rounded-full">
               {identity.womenOnlySummary}
             </span>
           </div>
@@ -46,7 +56,7 @@ export const Footer = () => {
                 <li key={item.id}>
                   <a
                     href={item.href}
-                    className="hover:text-[var(--rose)] transition-colors py-0.5 inline-block"
+                    className="hover:text-[var(--olive)] transition-colors py-0.5 inline-block"
                   >
                     {item.label}
                   </a>
@@ -74,7 +84,7 @@ export const Footer = () => {
                 <span className="leading-snug">{identity.address}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-[var(--champagne)] shrink-0" aria-hidden="true" />
+                <Clock className="w-4 h-4 text-[var(--taupe)] shrink-0" aria-hidden="true" />
                 <span>{hours.weekdays}</span>
               </div>
               <div className="flex items-center gap-2 pt-1">
@@ -83,7 +93,7 @@ export const Footer = () => {
                   href={generalWhatsAppUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-bold text-[var(--ink)] hover:text-[var(--rose)] underline-offset-4 hover:underline"
+                  className="font-bold text-[var(--ink)] hover:text-[var(--olive)] underline-offset-4 hover:underline"
                 >
                   WhatsApp: {contact.phoneDisplay}
                 </a>
@@ -100,7 +110,7 @@ export const Footer = () => {
 
           <a
             href="#top"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--rose)] hover:text-[var(--rose-hover)] transition-colors p-1"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--olive)] hover:text-[var(--rose)] transition-colors p-1"
             aria-label="Back to top of page"
           >
             <span>Back to top</span>

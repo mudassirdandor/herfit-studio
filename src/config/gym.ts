@@ -2,6 +2,7 @@ import type { GymConfig } from '../types/gym';
 import zumbaImg from '../assets/program-zumba.jpg';
 import yogaImg from '../assets/program-yoga.jpg';
 import strengthImg from '../assets/program-strength.jpg';
+import heroGymImg from '../assets/hero-gym.jpg';
 
 /**
  * Central Configuration for HerFit Studio (or any customized gym client).
@@ -48,10 +49,11 @@ export const gymConfig: GymConfig = {
   navigation: [
     { id: 'why', label: 'Why HerFit', href: '#why' },
     { id: 'programs', label: 'Programs', href: '#programs' },
+    { id: 'gallery', label: 'Inside Studio', href: '#gallery' },
     { id: 'schedule', label: 'Classes', href: '#schedule' },
     { id: 'timings', label: 'Timings', href: '#timings' },
     { id: 'fees', label: 'Fees', href: '#fees' },
-    { id: 'reviews', label: 'Reviews', href: '#reviews' },
+    { id: 'reviews', label: 'Experience', href: '#reviews' },
     { id: 'faq', label: 'FAQ', href: '#faq' },
   ],
 
@@ -87,6 +89,8 @@ export const gymConfig: GymConfig = {
       subtitle: 'Baghair fee ke aa kar try karein',
     },
     imageAlt: 'HerFit Studio private, modern fitness area designed specifically for women',
+    videoRequirementNote:
+      'Cinematic background video requirement: 1080p/720p H.264 mp4, under 5MB, seamless 6-10s loop of ladies fitness movement. Gracefully falls back to high-res hero photograph.',
   },
 
   trustPoints: [
@@ -242,6 +246,51 @@ export const gymConfig: GymConfig = {
     ],
   },
 
+  gallery: {
+    kicker: 'Inside HerFit Studio',
+    title: 'A space to move with confidence',
+    subtitle:
+      'Khawateen ke liye ek mukammal pur-sukoon, safe aur clean environment — jahan aap baghair kisi jhijhak ke apne fitness safar par tawajjuh de sakti hain.',
+    items: [
+      {
+        id: 'studio-floor',
+        title: 'Private Studio & Equipment',
+        category: '100% Women-Only',
+        description: 'Modern cardiovascular machines, stretching stations, and frosted exterior screening ensuring absolute privacy.',
+        imagePath: heroGymImg,
+        imageAlt: 'HerFit Studio private, modern fitness area designed exclusively for women',
+        spanClass: 'lg:col-span-8 lg:row-span-2',
+      },
+      {
+        id: 'strength-zone',
+        title: 'Functional Strength & Resistance',
+        category: 'Strength Zone',
+        description: 'Dedicated dumbbells, kettlebells, and body toning apparatus suited for all fitness levels.',
+        imagePath: strengthImg,
+        imageAlt: 'Free weights and functional strength resistance training area',
+        spanClass: 'lg:col-span-4 lg:row-span-1',
+      },
+      {
+        id: 'yoga-sanctuary',
+        title: 'Yoga, Mobility & Flexibility',
+        category: 'Mindful Movement',
+        description: 'Calming floor space for deep stretching, core stabilization, and stress relief.',
+        imagePath: yogaImg,
+        imageAlt: 'Serene yoga and flexibility studio floor with exercise mats',
+        spanClass: 'lg:col-span-4 lg:row-span-1',
+      },
+      {
+        id: 'zumba-floor',
+        title: 'High-Energy Zumba & Aerobics',
+        category: 'Group Fitness',
+        description: 'Vibrant group exercise space guided by certified female coaches with energetic rhythm and encouragement.',
+        imagePath: zumbaImg,
+        imageAlt: 'Aerobics and Zumba dance conditioning studio space',
+        spanClass: 'lg:col-span-12 lg:row-span-1',
+      },
+    ],
+  },
+
   schedule: {
     kicker: 'Weekly Class Schedule',
     title: 'Is hafte ki classes',
@@ -325,6 +374,9 @@ export const gymConfig: GymConfig = {
       'Ek dafa admission fee Rs 1,000 (har plan ke sath). Pehli trial class 100% free hai — pehle aa kar dekhein, phir itminan se faisla karein.',
     discountNote:
       'Student Discount: Valid student ID card dikhane par 10% discount · Buddy Offer: Agar do dost ya behnein ek sath admission lein to dono ki admission fee waive kar di jati hai.',
+    quarterlyDiscountPercent: 20,
+    quarterlyDiscountNotice:
+      '3-Mahine ke advance plan par 20% discount shamil hai (Rs 1,800 se Rs 4,500 tak ki bachat).',
     plans: [
       {
         id: 'basic',
@@ -390,7 +442,7 @@ export const gymConfig: GymConfig = {
         specialization: 'Fat Burn, Zumba, Cardio Conditioning',
         experience: '6+ saal ka fitness coaching tajurba',
         avatarLetter: 'S',
-        avatarBg: '#C77C86',
+        avatarBg: '#B8757F',
       },
       {
         id: 'mahnoor',
@@ -399,7 +451,7 @@ export const gymConfig: GymConfig = {
         specialization: 'Postural Health, Stress Relief, Flexibility',
         experience: '5+ saal ka certified yoga practice tajurba',
         avatarLetter: 'M',
-        avatarBg: '#91A995',
+        avatarBg: '#53695B',
       },
       {
         id: 'hira',
@@ -408,46 +460,48 @@ export const gymConfig: GymConfig = {
         specialization: 'Body Toning, Weight Training, Post-Rehab',
         experience: '4+ saal ka resistance training tajurba',
         avatarLetter: 'H',
-        avatarBg: '#B89568',
+        avatarBg: '#A28D78',
       },
     ],
   },
 
   reviews: {
-    kicker: 'Member Experiences',
-    title: 'Jo khawateen aati hain, unka itminan',
-    googleRating: '4.9',
-    reviewsCount: '80+ verified Google reviews',
+    kicker: 'Illustrative Member Experiences',
+    title: 'Typical routines & member scenarios',
+    subtitle:
+      'Sample member journeys illustrating privacy, routine flexibility, and female coaching outcomes for this portfolio showcase.',
+    disclaimer:
+      'Portfolio Demo Notice: The member scenarios below are illustrative personas demonstrating studio routines, privacy, and workout goals for this template preview.',
     reviews: [
       {
-        id: 'fatima',
-        name: 'Fatima S.',
+        id: 'scenario-fatima',
+        name: 'Fatima S. (Illustrative Persona)',
         roleTag: 'Regular Member · Jinnah Town',
+        scenarioTitle: 'Beginner & Weight Loss Journey',
         avatarLetter: 'F',
-        avatarColor: '#C77C86',
-        rating: 5,
+        avatarColor: '#B8757F',
         comment:
-          'Pehli dafa Quetta ke kisi gym mein itna sukoon aur privacy dekhi hai. Floor par sirf khawateen hoti hain, trainers bohat respectful aur cooperative hain. Diet guidance bhi Pakistani khano ke mutabiq thi jis se weight maintain karna asan raha.',
+          'Pehli dafa kisi gym mein itna sukoon aur privacy dekhi hai. Floor par sirf khawateen hoti hain, trainers bohat respectful aur cooperative hain. Diet guidance bhi Pakistani khano ke mutabiq hai jis se routine maintain karna asan rehta hai.',
       },
       {
-        id: 'ayesha',
-        name: 'Ayesha K.',
+        id: 'scenario-ayesha',
+        name: 'Ayesha K. (Illustrative Persona)',
         roleTag: 'Working Professional · Cantt',
+        scenarioTitle: 'Evening Session After Work',
         avatarLetter: 'A',
-        avatarColor: '#91A995',
-        rating: 5,
+        avatarColor: '#53695B',
         comment:
-          'Main bank mein job karti hoon, mere liye shaam 6:00 baje wala slot perfect hai. WhatsApp par inquiry karne ke 5 minute baad reply mila tha. Sab se achi baat ye hai ke koi hidden charges nahi hain aur mahol bohat dignified hai.',
+          'Main job karti hoon, mere liye shaam 6:00 baje wala prime slot perfect hai. WhatsApp par inquiry karne par foran slot confirmation mil jata hai. Sab se achi baat ye hai ke mahol dignified hai aur koi hidden charges nahi hain.',
       },
       {
-        id: 'maryam',
-        name: 'Maryam R.',
-        roleTag: 'Student & Mother · Quetta',
+        id: 'scenario-maryam',
+        name: 'Maryam R. (Illustrative Persona)',
+        roleTag: 'Mother & Student · Quetta',
+        scenarioTitle: 'Yoga & Posture Rehabilitation',
         avatarLetter: 'M',
-        avatarColor: '#B89568',
-        rating: 5,
+        avatarColor: '#A28D78',
         comment:
-          'Yoga aur stretching class se meri kamar ke dard mein wazeh farq para hai. Mahol itna safe aur khushgawar hai ke ab meri ammi bhi mere sath aati hain. Beginners ke liye is se behtreen gym Quetta mein nahi.',
+          'Yoga aur stretching classes se meri posture aur flexibility mein wazeh farq para hai. Mahol itna safe aur khushgawar hai ke beginners ke liye bilkul comfortable space hai.',
       },
     ],
   },
@@ -517,6 +571,11 @@ export const gymConfig: GymConfig = {
       'Friday Subah (7:00 AM – 12:00 PM)',
       'Saturday Weekend Slot',
     ],
+  },
+
+  portfolioDisclosure: {
+    enabled: true,
+    text: 'Portfolio demo website by InfluenceAI Lab — Mudassir Dandor. Gym details and content are illustrative.',
   },
 };
 

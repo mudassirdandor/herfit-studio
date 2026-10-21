@@ -38,7 +38,7 @@ export const TrialBooking = () => {
       className="py-14 sm:py-20 bg-[var(--bg)] transition-colors border-t border-[var(--line)]"
     >
       <div className="max-w-[1160px] mx-auto px-4 sm:px-6">
-        <div className="bg-[var(--surface2)] text-[var(--ink)] rounded-[32px] p-7 sm:p-10 lg:p-14 shadow-card border border-[var(--line)] relative overflow-hidden">
+        <div className="bg-[var(--surface-stone)]/40 text-[var(--ink)] rounded-[32px] p-7 sm:p-10 lg:p-14 shadow-card border border-[var(--line)] relative overflow-hidden">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
             {/* Left Column: Information & Trust */}
@@ -63,15 +63,15 @@ export const TrialBooking = () => {
                 {/* Quick Trust Checks */}
                 <div className="space-y-3 mb-8">
                   <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[var(--ink)] font-medium">
-                    <ShieldCheck className="w-4 h-4 text-[var(--sage)] shrink-0" aria-hidden="true" />
+                    <ShieldCheck className="w-4 h-4 text-[var(--olive)] shrink-0" aria-hidden="true" />
                     <span>100% Women-Only Environment · No obligation or advance payment</span>
                   </div>
                   <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[var(--ink)] font-medium">
-                    <Phone className="w-4 h-4 text-[var(--sage)] shrink-0" aria-hidden="true" />
+                    <Phone className="w-4 h-4 text-[var(--olive)] shrink-0" aria-hidden="true" />
                     <span>{booking.responseTimeNotice}</span>
                   </div>
                   <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[var(--ink)] font-medium">
-                    <Clock className="w-4 h-4 text-[var(--sage)] shrink-0" aria-hidden="true" />
+                    <Clock className="w-4 h-4 text-[var(--olive)] shrink-0" aria-hidden="true" />
                     <span>Instant WhatsApp handoff with immediate coach response</span>
                   </div>
                 </div>
@@ -99,7 +99,7 @@ export const TrialBooking = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="e.g. Fatima Khan"
-                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium text-sm focus-visible:outline-2 focus-visible:outline-[var(--rose)]"
+                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium text-sm focus-visible:outline-2 focus-visible:outline-[var(--olive)]"
                   />
                 </div>
 
@@ -118,7 +118,7 @@ export const TrialBooking = () => {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="e.g. 0311 2777061"
-                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium text-sm focus-visible:outline-2 focus-visible:outline-[var(--rose)]"
+                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium text-sm focus-visible:outline-2 focus-visible:outline-[var(--olive)]"
                   />
                 </div>
 
@@ -133,7 +133,7 @@ export const TrialBooking = () => {
                     id={goalId}
                     value={goal}
                     onChange={(e) => setGoal(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium text-sm focus-visible:outline-2 focus-visible:outline-[var(--rose)] cursor-pointer"
+                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium text-sm focus-visible:outline-2 focus-visible:outline-[var(--olive)] cursor-pointer"
                   >
                     {booking.goals.map((g, idx) => (
                       <option key={idx} value={g}>
@@ -154,7 +154,7 @@ export const TrialBooking = () => {
                     id={timeId}
                     value={timeSlot}
                     onChange={(e) => setTimeSlot(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium text-sm focus-visible:outline-2 focus-visible:outline-[var(--rose)] cursor-pointer"
+                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium text-sm focus-visible:outline-2 focus-visible:outline-[var(--olive)] cursor-pointer"
                   >
                     {booking.timeSlots.map((ts, idx) => (
                       <option key={idx} value={ts}>
@@ -179,7 +179,7 @@ export const TrialBooking = () => {
                   >
                     <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" aria-hidden="true" />
                     <div>
-                      <p className="font-bold m-0 mb-0.5">Shukriya {name}!</p>
+                      <p className="font-bold m-0 mb-0.5">{'Shukriya, '}{name.trim()}{'!'}</p>
                       <p className="m-0 leading-relaxed text-xs">
                         WhatsApp khul raha hai — wahan sirf Send dabayein, aap ki trial request hum tak pohnch jayegi aur hamari team slot confirm kar degi.
                       </p>

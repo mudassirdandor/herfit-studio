@@ -48,14 +48,14 @@ export const Benefits = () => {
         {/* Editorial Asymmetric Benefits Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           {/* Featured Primary Benefit Card (Left Column) */}
-          <div className="lg:col-span-5 flex flex-col justify-between bg-gradient-to-b from-[var(--surface)] to-[var(--surface2)]/60 border border-[var(--line)] rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+          <div className="lg:col-span-5 flex flex-col justify-between bg-gradient-to-b from-[var(--surface)] to-[var(--surface-stone)]/50 border border-[var(--line)] rounded-3xl p-6 sm:p-8 shadow-xs hover:shadow-card transition-shadow relative overflow-hidden">
             <div className="relative z-10">
               <div className="flex items-center justify-between gap-3 mb-5">
                 <div className="w-12 h-12 rounded-2xl bg-[var(--surface)] flex items-center justify-center border border-[var(--line)] shadow-xs">
                   {getIcon(featuredItem.icon)}
                 </div>
                 {featuredItem.tag && (
-                  <span className="inline-block text-xs font-bold tracking-wider uppercase bg-[var(--rose)] text-white px-3 py-1 rounded-full shadow-xs">
+                  <span className="inline-block text-xs font-bold tracking-wider uppercase bg-[var(--olive)] text-white px-3 py-1 rounded-full shadow-xs">
                     {featuredItem.tag}
                   </span>
                 )}
@@ -73,7 +73,7 @@ export const Benefits = () => {
               <div className="pt-6 border-t border-[var(--line)] space-y-2.5 relative z-10">
                 {featuredItem.highlights.map((highlight, idx) => (
                   <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[var(--ink)]">
-                    <div className="w-4 h-4 rounded-full bg-[var(--surface-sage)] text-[var(--sage)] flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-4 h-4 rounded-full bg-[var(--surface-stone)] text-[var(--olive)] flex items-center justify-center shrink-0 mt-0.5">
                       <Check className="w-3 h-3 stroke-[3]" aria-hidden="true" />
                     </div>
                     <span className="font-medium leading-tight">{highlight}</span>
@@ -88,10 +88,10 @@ export const Benefits = () => {
             {supportingItems.map((item) => (
               <div
                 key={item.id}
-                className="bg-[var(--surface)] border border-[var(--line)] rounded-2xl p-5 sm:p-6 shadow-xs hover:border-[var(--rose)]/30 hover:shadow-sm transition-all"
+                className="bg-[var(--surface)] border border-[var(--line)] rounded-2xl p-5 sm:p-6 shadow-xs hover:border-[var(--olive)]/40 hover:shadow-sm transition-all"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-[var(--surface2)] flex items-center justify-center shrink-0 border border-[var(--line)] mt-0.5">
+                  <div className="w-11 h-11 rounded-xl bg-[var(--surface-stone)]/60 text-[var(--olive)] flex items-center justify-center shrink-0 border border-[var(--line)] mt-0.5">
                     {getIcon(item.icon)}
                   </div>
                   <div className="flex-1">
@@ -107,9 +107,9 @@ export const Benefits = () => {
                         {item.highlights.map((h, hIdx) => (
                           <span
                             key={hIdx}
-                            className="inline-flex items-center gap-1.5 text-xs bg-[var(--surface2)] text-[var(--muted)] font-medium px-2.5 py-1 rounded-md"
+                            className="inline-flex items-center gap-1.5 text-xs bg-[var(--surface-stone)]/50 text-[var(--muted)] font-medium px-2.5 py-1 rounded-md"
                           >
-                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--rose)]" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--olive)]" />
                             {h}
                           </span>
                         ))}

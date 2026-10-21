@@ -113,7 +113,7 @@ export const TimingsAndBmi = () => {
           <div className="lg:col-span-6 bg-[var(--surface)] border border-[var(--line)] rounded-3xl p-6 sm:p-8 shadow-xs flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-[var(--surface-sage)] text-[var(--sage)] flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-[var(--surface-stone)] text-[var(--olive)] flex items-center justify-center">
                   <Clock className="w-5 h-5" aria-hidden="true" />
                 </div>
                 <div>
@@ -131,16 +131,16 @@ export const TimingsAndBmi = () => {
                 {timings.slots.map((slot, idx) => (
                   <div
                     key={idx}
-                    className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 p-3.5 rounded-xl bg-[var(--surface2)]/50 border border-[var(--line)]/60"
+                    className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 p-3.5 rounded-xl bg-[var(--surface-stone)]/30 border border-[var(--line)]/60"
                   >
                     <div className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-[var(--champagne)] shrink-0" />
+                      <span className="w-2 h-2 rounded-full bg-[var(--olive)] shrink-0" />
                       <span className="text-sm font-semibold text-[var(--ink)]">
                         {slot.label}
                       </span>
                     </div>
                     <div className="flex items-center gap-2 self-start sm:self-auto pl-4 sm:pl-0">
-                      <span className="text-sm font-bold text-[var(--champagne)]">
+                      <span className="text-sm font-bold text-[var(--taupe)]">
                         {slot.time}
                       </span>
                       {slot.tag && (
@@ -153,7 +153,7 @@ export const TimingsAndBmi = () => {
                 ))}
               </div>
 
-              <div className="p-3.5 rounded-xl bg-[var(--surface-sage)] border border-[var(--line)] text-xs text-[var(--ink)] leading-relaxed mb-8">
+              <div className="p-3.5 rounded-xl bg-[var(--surface-stone)]/50 border border-[var(--line)] text-xs text-[var(--ink)] leading-relaxed mb-8">
                 <span className="font-bold text-[var(--ink)]">Studio Policy: </span>
                 {timings.policyNote}
               </div>
@@ -261,7 +261,7 @@ export const TimingsAndBmi = () => {
               <div className="flex items-center gap-3 pt-2">
                 <button
                   type="submit"
-                  className="flex-1 inline-flex items-center justify-center gap-2 bg-[var(--rose)] hover:bg-[var(--rose-hover)] text-white font-bold py-3 px-5 rounded-full shadow-xs hover:shadow transition-all active:scale-98 text-sm cursor-pointer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 bg-[var(--olive)] hover:bg-[var(--olive-hover)] text-white font-bold py-3 px-5 rounded-full shadow-xs hover:shadow transition-all active:scale-98 text-sm cursor-pointer"
                 >
                   <span>Calculate My BMI</span>
                 </button>
@@ -270,7 +270,7 @@ export const TimingsAndBmi = () => {
                   <button
                     type="button"
                     onClick={handleReset}
-                    className="p-3 rounded-full border border-[var(--line)] bg-[var(--surface2)] hover:bg-[var(--line)] text-[var(--muted)] transition-colors cursor-pointer"
+                    className="p-3 rounded-full border border-[var(--line)] bg-[var(--surface-stone)]/50 hover:bg-[var(--line)] text-[var(--muted)] transition-colors cursor-pointer"
                     aria-label="Reset BMI form"
                   >
                     <RotateCcw className="w-4 h-4" aria-hidden="true" />
@@ -282,7 +282,7 @@ export const TimingsAndBmi = () => {
             {/* Calculated Output Box */}
             {result && (
               <div
-                className="mt-6 p-5 rounded-2xl bg-[var(--surface2)] border border-[var(--line)] animate-in fade-in-50 duration-200"
+                className="mt-6 p-5 rounded-2xl bg-[var(--surface-stone)]/40 border border-[var(--line)] animate-in fade-in-50 duration-200"
                 aria-live="polite"
               >
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
@@ -316,7 +316,7 @@ export const TimingsAndBmi = () => {
                     href={trialUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--rose)] hover:text-[var(--rose-hover)] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--olive)] hover:text-[var(--rose)] transition-colors"
                   >
                     <span>Discuss Plan on WhatsApp</span>
                     <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />

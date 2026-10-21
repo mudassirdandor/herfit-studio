@@ -1,52 +1,52 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-bg: #FFFDF9;
+  --color-brand-bg: #F8F5EF;
   --color-brand-surface: #FFFFFF;
-  --color-brand-blush: #F7ECEB;
-  --color-brand-sage-surface: #E7EEE6;
-  --color-brand-ink: #303630;
-  --color-brand-muted: #686E68;
-  --color-brand-line: #E8E5DF;
-  
-  --color-brand-rose: #C77C86;
-  --color-brand-rose-hover: #B56C76;
-  --color-brand-rose-soft: #F7ECEB;
-  
-  --color-brand-sage: #91A995;
-  --color-brand-sage-hover: #7E9782;
-  --color-brand-champagne: #B89568;
-  --color-brand-champagne-hover: #A58357;
+  --color-brand-stone: #E9E3D9;
+  --color-brand-olive: #53695B;
+  --color-brand-olive-hover: #435549;
+  --color-brand-sage: #A5B3A1;
+  --color-brand-rose: #B8757F;
+  --color-brand-rose-hover: #A6656F;
+  --color-brand-rose-soft: #F5EAEB;
+  --color-brand-charcoal: #292D29;
+  --color-brand-muted: #626761;
+  --color-brand-taupe: #A28D78;
+  --color-brand-line: #E2DDD5;
 
   --font-serif: "DM Serif Display", Georgia, serif;
   --font-sans: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  --shadow-soft: 0 4px 20px rgba(48, 54, 48, 0.04);
-  --shadow-card: 0 8px 30px rgba(48, 54, 48, 0.06);
-  --shadow-elevated: 0 14px 40px rgba(48, 54, 48, 0.08);
+  --shadow-soft: 0 4px 20px rgba(41, 45, 41, 0.04);
+  --shadow-card: 0 8px 30px rgba(41, 45, 41, 0.06);
+  --shadow-elevated: 0 14px 40px rgba(41, 45, 41, 0.08);
 }
 
 :root {
-  --bg: #FFFDF9;
+  --bg: #F8F5EF;
   --surface: #FFFFFF;
-  --surface2: #F7ECEB;
-  --surface-sage: #E7EEE6;
-  --ink: #303630;
-  --muted: #686E68;
-  --line: #E8E5DF;
+  --surface-stone: #E9E3D9;
+  --surface2: #E9E3D9;
+  --surface-sage: #E9E3D9;
   
-  --rose: #C77C86;
-  --rose-hover: #B56C76;
-  --rose-soft: #F7ECEB;
+  --ink: #292D29;
+  --muted: #626761;
+  --line: #E2DDD5;
   
-  --sage: #91A995;
-  --sage-soft: #E7EEE6;
-  --champagne: #B89568;
+  --olive: #53695B;
+  --olive-hover: #435549;
+  --sage: #A5B3A1;
+  --rose: #B8757F;
+  --rose-hover: #A6656F;
+  --rose-soft: #F5EAEB;
+  --taupe: #A28D78;
+  
   --wa: #2E8B57;
   --wa-hover: #267347;
   
   --radius: 20px;
-  --shadow: 0 8px 30px rgba(48, 54, 48, 0.06);
+  --shadow: 0 8px 30px rgba(41, 45, 41, 0.06);
 }
 
 html {

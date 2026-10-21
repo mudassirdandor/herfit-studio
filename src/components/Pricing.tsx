@@ -12,7 +12,7 @@ export const Pricing = () => {
     <section
       id="fees"
       aria-labelledby="fees-heading"
-      className="py-14 sm:py-20 bg-[var(--surface2)]/40 transition-colors border-t border-[var(--line)]"
+      className="py-14 sm:py-20 bg-[var(--surface-stone)]/30 transition-colors border-t border-[var(--line)]"
     >
       <div className="max-w-[1160px] mx-auto px-4 sm:px-6">
         {/* Section Header */}
@@ -45,7 +45,7 @@ export const Pricing = () => {
               aria-pressed={isMonthly}
               className={`text-xs sm:text-sm font-bold py-2 px-5 sm:px-6 rounded-full transition-all cursor-pointer ${
                 isMonthly
-                  ? 'bg-[var(--rose)] text-white shadow-xs'
+                  ? 'bg-[var(--olive)] text-white shadow-xs'
                   : 'text-[var(--muted)] hover:text-[var(--ink)]'
               }`}
             >
@@ -57,7 +57,7 @@ export const Pricing = () => {
               aria-pressed={!isMonthly}
               className={`text-xs sm:text-sm font-bold py-2 px-5 sm:px-6 rounded-full transition-all cursor-pointer flex items-center gap-1.5 ${
                 !isMonthly
-                  ? 'bg-[var(--rose)] text-white shadow-xs'
+                  ? 'bg-[var(--olive)] text-white shadow-xs'
                   : 'text-[var(--muted)] hover:text-[var(--ink)]'
               }`}
             >
@@ -76,6 +76,7 @@ export const Pricing = () => {
             const price = isMonthly ? plan.monthlyPrice : plan.quarterlyPrice;
             const formattedPrice = `Rs ${price.toLocaleString('en-PK')}`;
             const periodLabel = isMonthly ? '/ month' : '/ 3 months';
+            const savingsAmount = plan.monthlyPrice * 3 - plan.quarterlyPrice;
 
             const planInquiryUrl = buildWhatsAppLink(
               contact.whatsappNumber,
@@ -87,14 +88,14 @@ export const Pricing = () => {
                 key={plan.id}
                 className={`flex flex-col justify-between bg-[var(--surface)] rounded-3xl p-6 sm:p-8 transition-all relative ${
                   isPop
-                    ? 'border-2 border-[var(--rose)] shadow-md ring-1 ring-[var(--rose)]/20'
-                    : 'border border-[var(--line)] shadow-xs hover:border-[var(--rose)]/30 hover:shadow-sm'
+                    ? 'border-2 border-[var(--olive)] shadow-card ring-1 ring-[var(--olive)]/20'
+                    : 'border border-[var(--line)] shadow-xs hover:border-[var(--olive)]/40 hover:shadow-sm'
                 }`}
               >
                 {/* Popular Badge */}
                 {isPop && plan.popularBadge && (
                   <div className="absolute -top-3.5 left-6 sm:left-8">
-                    <span className="inline-block text-[11px] font-extrabold tracking-wider uppercase bg-[var(--rose)] text-white px-3.5 py-1 rounded-full shadow-xs">
+                    <span className="inline-block text-[11px] font-extrabold tracking-wider uppercase bg-[var(--olive)] text-white px-3.5 py-1 rounded-full shadow-xs">
                       {plan.popularBadge}
                     </span>
                   </div>
@@ -120,6 +121,12 @@ export const Pricing = () => {
                         {periodLabel}
                       </span>
                     </div>
+
+                    {!isMonthly && (
+                      <p className="mt-1.5 text-xs font-semibold text-[var(--olive)] flex items-center gap-1">
+                        <span>✨ Save Rs {savingsAmount.toLocaleString('en-PK')} with 20% 3-month discount</span>
+                      </p>
+                    )}
                   </div>
 
                   {/* Feature Checklist */}
@@ -132,11 +139,11 @@ export const Pricing = () => {
                         }`}
                       >
                         {f.included ? (
-                          <div className="w-4 h-4 rounded-full bg-[var(--surface-sage)] text-[var(--sage)] flex items-center justify-center shrink-0 mt-0.5">
+                          <div className="w-4 h-4 rounded-full bg-[var(--surface-stone)] text-[var(--olive)] flex items-center justify-center shrink-0 mt-0.5">
                             <Check className="w-3 h-3 stroke-[3]" aria-hidden="true" />
                           </div>
                         ) : (
-                          <div className="w-4 h-4 rounded-full bg-[var(--surface2)] text-[var(--muted)] flex items-center justify-center shrink-0 mt-0.5">
+                          <div className="w-4 h-4 rounded-full bg-[var(--surface-stone)]/50 text-[var(--muted)] flex items-center justify-center shrink-0 mt-0.5">
                             <Minus className="w-3 h-3 stroke-[2.5]" aria-hidden="true" />
                           </div>
                         )}
@@ -155,7 +162,7 @@ export const Pricing = () => {
                     className={`w-full inline-flex items-center justify-center gap-2 text-sm font-bold py-3.5 px-6 rounded-full transition-all active:scale-98 shadow-xs cursor-pointer ${
                       isPop
                         ? 'bg-[var(--rose)] hover:bg-[var(--rose-hover)] text-white shadow-sm hover:shadow'
-                        : 'bg-[var(--surface2)] hover:bg-[var(--line)] text-[var(--ink)] border border-[var(--line)]'
+                        : 'bg-[var(--surface-stone)]/50 hover:bg-[var(--line)] text-[var(--ink)] border border-[var(--line)]'
                     }`}
                   >
                     <span>Start Free Trial</span>
@@ -167,8 +174,12 @@ export const Pricing = () => {
           })}
         </div>
 
-        {/* Student & Buddy Discount Note */}
-        <div className="mt-10 p-4 sm:p-5 rounded-2xl bg-[var(--surface)] border border-[var(--line)] text-center text-xs sm:text-sm text-[var(--muted)]">
+        {/* Student, Buddy & Quarterly Discount Note */}
+        <div className="mt-10 p-5 rounded-2xl bg-[var(--surface)] border border-[var(--line)] text-center text-xs sm:text-sm text-[var(--muted)] space-y-2 shadow-xs">
+          <p className="m-0 leading-relaxed font-semibold text-[var(--olive)]">
+            🏷️ <strong>Quarterly Savings: </strong>
+            {pricing.quarterlyDiscountNotice}
+          </p>
           <p className="m-0 leading-relaxed font-medium">
             🎓 <strong className="text-[var(--ink)]">Special Savings: </strong>
             {pricing.discountNote}

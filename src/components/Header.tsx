@@ -32,11 +32,11 @@ export const Header = () => {
         {/* Brand Logo */}
         <a
           href="#top"
-          className="flex items-center gap-2.5 text-inherit no-underline group focus-visible:outline-2 focus-visible:outline-[var(--rose)] rounded-lg p-1"
+          className="flex items-center gap-2.5 text-inherit no-underline group focus-visible:outline-2 focus-visible:outline-[var(--olive)] rounded-lg p-1"
           aria-label={`${gymConfig.identity.name} Home`}
         >
           <span
-            className="w-10 h-10 rounded-xl bg-[var(--rose)] text-white flex items-center justify-center font-serif text-xl font-bold shadow-sm group-hover:bg-[var(--rose-hover)] transition-colors"
+            className="w-10 h-10 rounded-xl bg-[var(--olive)] text-white flex items-center justify-center font-serif text-xl font-bold shadow-sm group-hover:bg-[var(--olive-hover)] transition-colors"
             aria-hidden="true"
           >
             H
@@ -57,7 +57,7 @@ export const Header = () => {
             <a
               key={item.id}
               href={item.href}
-              className="text-[var(--ink)] hover:text-[var(--rose)] transition-colors py-1 focus-visible:outline-2 focus-visible:outline-[var(--rose)] rounded"
+              className="text-[var(--ink)] hover:text-[var(--olive)] transition-colors py-1 focus-visible:outline-2 focus-visible:outline-[var(--olive)] rounded"
             >
               {item.label}
             </a>
@@ -79,7 +79,7 @@ export const Header = () => {
         <button
           type="button"
           onClick={() => setMobileMenuOpen((prev) => !prev)}
-          className="md:hidden inline-flex items-center justify-center p-2 rounded-xl text-[var(--ink)] hover:bg-[var(--surface2)] focus-visible:outline-2 focus-visible:outline-[var(--rose)] transition-colors"
+          className="md:hidden inline-flex items-center justify-center p-2 rounded-xl text-[var(--ink)] hover:bg-[var(--surface-stone)]/50 focus-visible:outline-2 focus-visible:outline-[var(--olive)] transition-colors"
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-navigation"
           aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
