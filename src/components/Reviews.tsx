@@ -28,7 +28,7 @@ export const Reviews = () => {
         {/* Google Reviews Header Banner */}
         <div className="bg-[var(--surface)] border border-[var(--line)] rounded-3xl p-5 sm:p-6 mb-8 sm:mb-10 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-[var(--sage)] text-[var(--teal)] flex items-center justify-center font-serif text-2xl font-bold shrink-0">
+            <div className="w-12 h-12 rounded-2xl bg-[var(--surface-sage)] text-[var(--sage)] flex items-center justify-center font-serif text-2xl font-bold shrink-0">
               ★
             </div>
             <div>
@@ -36,9 +36,9 @@ export const Reviews = () => {
                 <span className="font-serif text-xl sm:text-2xl font-bold text-[var(--ink)] leading-none">
                   {googleRating} / 5.0
                 </span>
-                <div className="flex text-amber-500" aria-label="5 out of 5 stars">
+                <div className="flex text-[var(--champagne)]" aria-label="5 out of 5 stars">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" aria-hidden="true" />
+                    <Star key={i} className="w-4 h-4 fill-[var(--champagne)] text-[var(--champagne)]" aria-hidden="true" />
                   ))}
                 </div>
               </div>
@@ -58,7 +58,7 @@ export const Reviews = () => {
           {reviews.map((rev) => (
             <div
               key={rev.id}
-              className="bg-[var(--surface)] border border-[var(--line)] rounded-3xl p-6 sm:p-7 shadow-xs hover:border-[var(--teal)]/40 hover:shadow-sm transition-all flex flex-col justify-between"
+              className="bg-[var(--surface)] border border-[var(--line)] rounded-3xl p-6 sm:p-7 shadow-xs hover:border-[var(--rose)]/30 hover:shadow-sm transition-all flex flex-col justify-between"
             >
               <div>
                 {/* Author Info */}
@@ -81,9 +81,9 @@ export const Reviews = () => {
                 </div>
 
                 {/* Star Rating */}
-                <div className="flex items-center gap-1 text-amber-400 mb-3" aria-label="5 stars rating">
+                <div className="flex items-center gap-1 text-[var(--champagne)] mb-3" aria-label="5 stars rating">
                   {[...Array(rev.rating)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" aria-hidden="true" />
+                    <Star key={i} className="w-3.5 h-3.5 fill-[var(--champagne)] text-[var(--champagne)]" aria-hidden="true" />
                   ))}
                 </div>
 
@@ -94,7 +94,7 @@ export const Reviews = () => {
               </div>
 
               <div className="pt-4 mt-4 border-t border-[var(--line)]/50 flex items-center gap-1 text-[11px] text-[var(--muted)]">
-                <MessageSquareQuote className="w-3.5 h-3.5 text-[var(--teal)]" aria-hidden="true" />
+                <MessageSquareQuote className="w-3.5 h-3.5 text-[var(--rose)]" aria-hidden="true" />
                 <span>Verified Member Feedback</span>
               </div>
             </div>

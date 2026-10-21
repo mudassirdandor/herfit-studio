@@ -47,12 +47,12 @@ export const Faq = () => {
                   aria-expanded={isOpen}
                   aria-controls={`faq-ans-${faq.id}`}
                   onClick={() => toggleItem(faq.id)}
-                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[var(--ink)] hover:text-[var(--rose)] transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-[var(--teal)]"
+                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[var(--ink)] hover:text-[var(--rose)] transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-[var(--rose)]"
                 >
                   <span className="leading-snug">{faq.question}</span>
                   <div
                     className={`w-8 h-8 rounded-full bg-[var(--surface2)] flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                      isOpen ? 'rotate-180 bg-[var(--sage)] text-[var(--teal)]' : 'text-[var(--muted)]'
+                      isOpen ? 'rotate-180 bg-[var(--rose-soft)] text-[var(--rose)]' : 'text-[var(--muted)]'
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" aria-hidden="true" />

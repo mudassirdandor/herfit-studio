@@ -46,7 +46,7 @@ export const Hero = () => {
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               <a
                 href={gymConfig.hero.primaryCtaHref}
-                className="inline-flex items-center justify-center gap-2 bg-[var(--rose)] hover:bg-[#a33b49] text-white text-base font-bold py-3.5 px-6 sm:px-7 rounded-full shadow-md hover:shadow-lg transition-all transform active:scale-95 focus-visible:outline-2 focus-visible:outline-[var(--rose)]"
+                className="inline-flex items-center justify-center gap-2 bg-[var(--rose)] hover:bg-[var(--rose-hover)] text-white text-base font-bold py-3.5 px-6 sm:px-7 rounded-full shadow-md hover:shadow-lg transition-all transform active:scale-95 focus-visible:outline-2 focus-visible:outline-[var(--rose)]"
               >
                 <span>{gymConfig.hero.primaryCtaText}</span>
               </a>
@@ -55,7 +55,7 @@ export const Hero = () => {
                 href={trialWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[var(--wa)] hover:bg-[#1b934a] text-white text-base font-bold py-3.5 px-6 sm:px-7 rounded-full shadow-md hover:shadow-lg transition-all transform active:scale-95 focus-visible:outline-2 focus-visible:outline-[var(--wa)]"
+                className="inline-flex items-center justify-center gap-2 bg-[var(--wa)] hover:bg-[var(--wa-hover)] text-white text-base font-bold py-3.5 px-6 sm:px-7 rounded-full shadow-md hover:shadow-lg transition-all transform active:scale-95 focus-visible:outline-2 focus-visible:outline-[var(--wa)]"
                 aria-label="Chat with HerFit Studio on WhatsApp"
               >
                 <MessageCircle className="w-5 h-5 shrink-0" aria-hidden="true" />
@@ -68,9 +68,9 @@ export const Hero = () => {
               {gymConfig.hero.stats.map((stat, idx) => (
                 <div
                   key={idx}
-                  className="bg-[var(--surface)] border border-[var(--line)] rounded-2xl p-3.5 sm:p-4 shadow-sm hover:border-[var(--teal)]/30 transition-colors"
+                  className="bg-[var(--surface)] border border-[var(--line)] rounded-2xl p-3.5 sm:p-4 shadow-sm hover:border-[var(--rose)]/30 transition-colors"
                 >
-                  <b className="block font-serif text-2xl sm:text-3xl text-[var(--teal)] font-normal leading-none mb-1.5">
+                  <b className="block font-serif text-2xl sm:text-3xl text-[var(--champagne)] font-normal leading-none mb-1.5">
                     {stat.value}
                   </b>
                   <span className="text-xs sm:text-[13px] text-[var(--muted)] leading-snug block">

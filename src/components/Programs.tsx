@@ -70,7 +70,7 @@ export const Programs = () => {
                     }`}
                   >
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-lg bg-[var(--sage)] text-[var(--teal)] flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-lg bg-[var(--surface-sage)] text-[var(--sage)] flex items-center justify-center">
                         <Activity className="w-4 h-4" aria-hidden="true" />
                       </div>
                       <span className="text-xs font-bold uppercase tracking-wider text-[var(--rose)]">
@@ -115,7 +115,7 @@ export const Programs = () => {
                             key={idx}
                             className="flex items-center gap-2 text-xs text-[var(--ink)] font-medium"
                           >
-                            <Check className="w-3.5 h-3.5 text-[var(--teal)] shrink-0" aria-hidden="true" />
+                            <Check className="w-3.5 h-3.5 text-[var(--rose)] shrink-0" aria-hidden="true" />
                             <span>{h}</span>
                           </div>
                         ))}
@@ -130,7 +130,7 @@ export const Programs = () => {
                     </span>
                     <a
                       href="#book"
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--teal)] hover:text-[var(--rose)] transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--rose)] hover:text-[var(--rose-hover)] transition-colors"
                       aria-label={`Inquire about ${program.title} trial class`}
                     >
                       <span>Try Free</span>
@@ -164,7 +164,7 @@ export const Programs = () => {
               href={trialWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[var(--wa)] hover:bg-[#1b934a] text-white text-sm font-bold py-3 px-6 rounded-full shadow-sm hover:shadow transition-all active:scale-95"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[var(--wa)] hover:bg-[var(--wa-hover)] text-white text-sm font-bold py-3 px-6 rounded-full shadow-sm hover:shadow transition-all active:scale-95"
             >
               <span>Book Trial on WhatsApp</span>
               <ArrowRight className="w-4 h-4" aria-hidden="true" />

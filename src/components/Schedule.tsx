@@ -14,9 +14,9 @@ export const Schedule = () => {
       case 'rose':
         return 'bg-[var(--rose-soft)] text-[var(--rose)] border-[var(--rose)]/20';
       case 'teal':
-        return 'bg-[var(--sage)] text-[var(--teal)] border-[var(--teal)]/20';
+        return 'bg-[var(--surface-sage)] text-[var(--sage)] border-[var(--sage)]/30';
       case 'sage':
-        return 'bg-[#e3efe8] text-[#14544e] border-[#14544e]/20';
+        return 'bg-[var(--surface-sage)] text-[var(--ink)] border-[var(--line)]';
       default:
         return 'bg-[var(--surface2)] text-[var(--ink)] border-[var(--line)]';
     }
@@ -63,10 +63,10 @@ export const Schedule = () => {
                 aria-controls={`panel-${day}`}
                 tabIndex={isSelected ? 0 : -1}
                 onClick={() => setSelectedDay(day)}
-                className={`shrink-0 font-bold text-sm px-5 py-2.5 rounded-full border transition-all cursor-pointer focus-visible:outline-2 focus-visible:outline-[var(--teal)] ${
+                className={`shrink-0 font-bold text-sm px-5 py-2.5 rounded-full border transition-all cursor-pointer focus-visible:outline-2 focus-visible:outline-[var(--rose)] ${
                   isSelected
-                    ? 'bg-[var(--teal)] text-white border-[var(--teal)] shadow-sm'
-                    : 'bg-[var(--surface)] text-[var(--ink)] border-[var(--line)] hover:border-[var(--teal)]/40 hover:bg-[var(--surface2)]'
+                    ? 'bg-[var(--rose)] text-white border-[var(--rose)] shadow-sm'
+                    : 'bg-[var(--surface)] text-[var(--ink)] border-[var(--line)] hover:border-[var(--rose)]/40 hover:bg-[var(--surface2)]'
                 }`}
               >
                 {day}
@@ -85,7 +85,7 @@ export const Schedule = () => {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse" aria-label={`${selectedDay} Class Schedule`}>
               <thead>
-                <tr className="bg-[var(--teal)] text-white text-xs sm:text-sm uppercase tracking-wider font-bold">
+                <tr className="bg-[var(--surface-sage)] text-[var(--ink)] text-xs sm:text-sm uppercase tracking-wider font-bold border-b border-[var(--line)]">
                   <th scope="col" className="py-4 px-4 sm:px-6">
                     Time Slot
                   </th>
@@ -117,7 +117,7 @@ export const Schedule = () => {
                     >
                       <td className="py-4 px-4 sm:px-6 font-semibold text-[var(--ink)] whitespace-nowrap">
                         <div className="flex items-center gap-1.5">
-                          <Clock className="w-4 h-4 text-[var(--teal)] shrink-0" aria-hidden="true" />
+                          <Clock className="w-4 h-4 text-[var(--champagne)] shrink-0" aria-hidden="true" />
                           <span>{item.time}</span>
                         </div>
                       </td>
@@ -147,7 +147,7 @@ export const Schedule = () => {
                           href={inquiryUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-xs font-bold text-[var(--teal)] hover:text-[var(--rose)] transition-colors p-1"
+                          className="inline-flex items-center gap-1 text-xs font-bold text-[var(--rose)] hover:text-[var(--rose-hover)] transition-colors p-1"
                           aria-label={`Ask about ${item.title} on WhatsApp`}
                         >
                           <span className="hidden sm:inline">Reserve</span>
@@ -163,7 +163,7 @@ export const Schedule = () => {
 
           {/* Schedule Footer Note */}
           <div className="p-4 sm:p-5 bg-[var(--surface2)]/40 border-t border-[var(--line)] text-xs sm:text-sm text-[var(--muted)] flex items-start gap-2">
-            <span className="font-bold text-[var(--teal)] shrink-0">ℹ️</span>
+            <span className="font-bold text-[var(--rose)] shrink-0">ℹ️</span>
             <p className="leading-relaxed m-0">{note}</p>
           </div>
         </div>

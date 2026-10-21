@@ -21,7 +21,7 @@ export const Footer = () => {
           {/* Column 1: Brand & Positioning */}
           <div className="md:col-span-5">
             <div className="flex items-center gap-2.5 mb-3.5">
-              <span className="w-8 h-8 rounded-lg bg-[var(--teal)] text-white flex items-center justify-center font-serif text-lg font-bold">
+              <span className="w-8 h-8 rounded-lg bg-[var(--rose)] text-white flex items-center justify-center font-serif text-lg font-bold">
                 H
               </span>
               <span className="font-serif text-xl font-bold text-[var(--ink)]">
@@ -31,7 +31,7 @@ export const Footer = () => {
             <p className="text-xs sm:text-sm text-[var(--muted)] leading-relaxed max-w-sm mb-4">
               100% women-only fitness boutique studio serving Quetta with female fitness trainers, complete privacy, group aerobics, yoga, and customized weight loss programs.
             </p>
-            <span className="inline-block text-xs font-semibold text-[var(--teal)] bg-[var(--sage)] px-3 py-1 rounded-full">
+            <span className="inline-block text-xs font-semibold text-[var(--ink)] bg-[var(--surface-sage)] border border-[var(--line)] px-3 py-1 rounded-full">
               {identity.womenOnlySummary}
             </span>
           </div>
@@ -74,11 +74,11 @@ export const Footer = () => {
                 <span className="leading-snug">{identity.address}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-[var(--teal)] shrink-0" aria-hidden="true" />
+                <Clock className="w-4 h-4 text-[var(--champagne)] shrink-0" aria-hidden="true" />
                 <span>{hours.weekdays}</span>
               </div>
               <div className="flex items-center gap-2 pt-1">
-                <MessageCircle className="w-4 h-4 text-[#1faa55] shrink-0" aria-hidden="true" />
+                <MessageCircle className="w-4 h-4 text-[var(--wa)] shrink-0" aria-hidden="true" />
                 <a
                   href={generalWhatsAppUrl}
                   target="_blank"
@@ -100,7 +100,7 @@ export const Footer = () => {
 
           <a
             href="#top"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--teal)] hover:text-[var(--rose)] transition-colors p-1"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--rose)] hover:text-[var(--rose-hover)] transition-colors p-1"
             aria-label="Back to top of page"
           >
             <span>Back to top</span>

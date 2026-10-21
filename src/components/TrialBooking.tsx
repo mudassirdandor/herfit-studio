@@ -38,52 +38,52 @@ export const TrialBooking = () => {
       className="py-14 sm:py-20 bg-[var(--bg)] transition-colors border-t border-[var(--line)]"
     >
       <div className="max-w-[1160px] mx-auto px-4 sm:px-6">
-        <div className="bg-[#14544e] text-white rounded-[32px] p-7 sm:p-10 lg:p-14 shadow-xl border border-[#0d3a36] relative overflow-hidden">
+        <div className="bg-[var(--surface2)] text-[var(--ink)] rounded-[32px] p-7 sm:p-10 lg:p-14 shadow-card border border-[var(--line)] relative overflow-hidden">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
             {/* Left Column: Information & Trust */}
             <div className="lg:col-span-6 flex flex-col justify-between">
               <div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-[#fbeaec] text-xs font-bold tracking-wider uppercase mb-4 border border-white/15">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--rose-soft)] text-[var(--rose)] text-xs font-bold tracking-wider uppercase mb-4 border border-[var(--rose)]/20 shadow-xs">
                   <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
                   <span>Free Trial Session</span>
                 </div>
 
                 <h2
                   id="booking-heading"
-                  className="font-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-normal leading-tight tracking-tight mb-4 text-white"
+                  className="font-serif text-3xl sm:text-4xl lg:text-[2.6rem] font-normal leading-tight tracking-tight mb-4 text-[var(--ink)]"
                 >
                   {booking.title}
                 </h2>
 
-                <p className="text-sm sm:text-base text-white/90 leading-relaxed mb-6 font-normal">
+                <p className="text-sm sm:text-base text-[var(--muted)] leading-relaxed mb-6 font-normal">
                   {booking.description}
                 </p>
 
                 {/* Quick Trust Checks */}
                 <div className="space-y-3 mb-8">
-                  <div className="flex items-center gap-2.5 text-xs sm:text-sm text-white/95">
-                    <ShieldCheck className="w-4 h-4 text-[#1faa55] shrink-0" aria-hidden="true" />
+                  <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[var(--ink)] font-medium">
+                    <ShieldCheck className="w-4 h-4 text-[var(--sage)] shrink-0" aria-hidden="true" />
                     <span>100% Women-Only Environment · No obligation or advance payment</span>
                   </div>
-                  <div className="flex items-center gap-2.5 text-xs sm:text-sm text-white/95">
-                    <Phone className="w-4 h-4 text-[#1faa55] shrink-0" aria-hidden="true" />
+                  <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[var(--ink)] font-medium">
+                    <Phone className="w-4 h-4 text-[var(--sage)] shrink-0" aria-hidden="true" />
                     <span>{booking.responseTimeNotice}</span>
                   </div>
-                  <div className="flex items-center gap-2.5 text-xs sm:text-sm text-white/95">
-                    <Clock className="w-4 h-4 text-[#1faa55] shrink-0" aria-hidden="true" />
+                  <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[var(--ink)] font-medium">
+                    <Clock className="w-4 h-4 text-[var(--sage)] shrink-0" aria-hidden="true" />
                     <span>Instant WhatsApp handoff with immediate coach response</span>
                   </div>
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl bg-white/10 border border-white/15 text-xs text-white/80 leading-relaxed">
+              <div className="p-4 rounded-2xl bg-[var(--surface)] border border-[var(--line)] text-xs text-[var(--muted)] leading-relaxed shadow-xs">
                 <span>⚠️ {booking.whatsappNotice}</span>
               </div>
             </div>
 
             {/* Right Column: Interactive Form */}
-            <div className="lg:col-span-6 bg-white text-[var(--ink)] rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl">
+            <div className="lg:col-span-6 bg-[var(--surface)] text-[var(--ink)] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[var(--line)] shadow-elevated">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label
@@ -99,7 +99,7 @@ export const TrialBooking = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="e.g. Fatima Khan"
-                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium text-sm focus-visible:outline-2 focus-visible:outline-[var(--teal)]"
+                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium text-sm focus-visible:outline-2 focus-visible:outline-[var(--rose)]"
                   />
                 </div>
 
@@ -118,7 +118,7 @@ export const TrialBooking = () => {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="e.g. 0311 2777061"
-                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium text-sm focus-visible:outline-2 focus-visible:outline-[var(--teal)]"
+                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium text-sm focus-visible:outline-2 focus-visible:outline-[var(--rose)]"
                   />
                 </div>
 
@@ -133,7 +133,7 @@ export const TrialBooking = () => {
                     id={goalId}
                     value={goal}
                     onChange={(e) => setGoal(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium text-sm focus-visible:outline-2 focus-visible:outline-[var(--teal)] cursor-pointer"
+                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium text-sm focus-visible:outline-2 focus-visible:outline-[var(--rose)] cursor-pointer"
                   >
                     {booking.goals.map((g, idx) => (
                       <option key={idx} value={g}>
@@ -154,7 +154,7 @@ export const TrialBooking = () => {
                     id={timeId}
                     value={timeSlot}
                     onChange={(e) => setTimeSlot(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium text-sm focus-visible:outline-2 focus-visible:outline-[var(--teal)] cursor-pointer"
+                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium text-sm focus-visible:outline-2 focus-visible:outline-[var(--rose)] cursor-pointer"
                   >
                     {booking.timeSlots.map((ts, idx) => (
                       <option key={idx} value={ts}>
@@ -166,7 +166,7 @@ export const TrialBooking = () => {
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[var(--wa)] hover:bg-[#1b934a] text-white text-base font-bold py-3.5 px-6 rounded-full shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer mt-2"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[var(--wa)] hover:bg-[var(--wa-hover)] text-white text-base font-bold py-3.5 px-6 rounded-full shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer mt-2"
                 >
                   <Send className="w-4 h-4" aria-hidden="true" />
                   <span>Confirm Free Trial on WhatsApp</span>

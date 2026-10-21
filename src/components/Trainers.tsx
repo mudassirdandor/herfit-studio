@@ -39,7 +39,7 @@ export const Trainers = () => {
             return (
               <div
                 key={trainer.id}
-                className="bg-[var(--surface)] border border-[var(--line)] rounded-3xl p-6 sm:p-7 shadow-xs hover:border-[var(--teal)]/40 hover:shadow-sm transition-all flex flex-col justify-between"
+                className="bg-[var(--surface)] border border-[var(--line)] rounded-3xl p-6 sm:p-7 shadow-xs hover:border-[var(--rose)]/30 hover:shadow-sm transition-all flex flex-col justify-between"
               >
                 <div>
                   {/* Monogram Avatar & Badges */}
@@ -63,7 +63,7 @@ export const Trainers = () => {
                   {/* Specialization Details */}
                   <div className="space-y-3 pt-2">
                     <div className="flex items-start gap-2 text-xs sm:text-sm text-[var(--ink)]">
-                      <Award className="w-4 h-4 text-[var(--teal)] shrink-0 mt-0.5" aria-hidden="true" />
+                      <Award className="w-4 h-4 text-[var(--rose)] shrink-0 mt-0.5" aria-hidden="true" />
                       <span className="font-medium leading-relaxed">
                         {trainer.specialization}
                       </span>
@@ -81,7 +81,7 @@ export const Trainers = () => {
                     href={trainerInquiryUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--teal)] hover:text-[var(--rose)] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--rose)] hover:text-[var(--rose-hover)] transition-colors"
                   >
                     <MessageCircle className="w-3.5 h-3.5" aria-hidden="true" />
                     <span>Inquire About Slots</span>

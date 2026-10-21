@@ -390,7 +390,7 @@ export const gymConfig: GymConfig = {
         specialization: 'Fat Burn, Zumba, Cardio Conditioning',
         experience: '6+ saal ka fitness coaching tajurba',
         avatarLetter: 'S',
-        avatarBg: '#bc4756',
+        avatarBg: '#C77C86',
       },
       {
         id: 'mahnoor',
@@ -399,7 +399,7 @@ export const gymConfig: GymConfig = {
         specialization: 'Postural Health, Stress Relief, Flexibility',
         experience: '5+ saal ka certified yoga practice tajurba',
         avatarLetter: 'M',
-        avatarBg: '#14544e',
+        avatarBg: '#91A995',
       },
       {
         id: 'hira',
@@ -408,7 +408,7 @@ export const gymConfig: GymConfig = {
         specialization: 'Body Toning, Weight Training, Post-Rehab',
         experience: '4+ saal ka resistance training tajurba',
         avatarLetter: 'H',
-        avatarBg: '#b98a2e',
+        avatarBg: '#B89568',
       },
     ],
   },
@@ -424,7 +424,7 @@ export const gymConfig: GymConfig = {
         name: 'Fatima S.',
         roleTag: 'Regular Member · Jinnah Town',
         avatarLetter: 'F',
-        avatarColor: '#bc4756',
+        avatarColor: '#C77C86',
         rating: 5,
         comment:
           'Pehli dafa Quetta ke kisi gym mein itna sukoon aur privacy dekhi hai. Floor par sirf khawateen hoti hain, trainers bohat respectful aur cooperative hain. Diet guidance bhi Pakistani khano ke mutabiq thi jis se weight maintain karna asan raha.',
@@ -434,7 +434,7 @@ export const gymConfig: GymConfig = {
         name: 'Ayesha K.',
         roleTag: 'Working Professional · Cantt',
         avatarLetter: 'A',
-        avatarColor: '#14544e',
+        avatarColor: '#91A995',
         rating: 5,
         comment:
           'Main bank mein job karti hoon, mere liye shaam 6:00 baje wala slot perfect hai. WhatsApp par inquiry karne ke 5 minute baad reply mila tha. Sab se achi baat ye hai ke koi hidden charges nahi hain aur mahol bohat dignified hai.',
@@ -444,7 +444,7 @@ export const gymConfig: GymConfig = {
         name: 'Maryam R.',
         roleTag: 'Student & Mother · Quetta',
         avatarLetter: 'M',
-        avatarColor: '#b98a2e',
+        avatarColor: '#B89568',
         rating: 5,
         comment:
           'Yoga aur stretching class se meri kamar ke dard mein wazeh farq para hai. Mahol itna safe aur khushgawar hai ke ab meri ammi bhi mere sath aati hain. Beginners ke liye is se behtreen gym Quetta mein nahi.',

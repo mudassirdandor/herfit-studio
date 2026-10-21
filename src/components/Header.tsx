@@ -32,11 +32,11 @@ export const Header = () => {
         {/* Brand Logo */}
         <a
           href="#top"
-          className="flex items-center gap-2.5 text-inherit no-underline group focus-visible:outline-2 focus-visible:outline-[var(--teal)] rounded-lg p-1"
+          className="flex items-center gap-2.5 text-inherit no-underline group focus-visible:outline-2 focus-visible:outline-[var(--rose)] rounded-lg p-1"
           aria-label={`${gymConfig.identity.name} Home`}
         >
           <span
-            className="w-10 h-10 rounded-xl bg-[var(--teal)] text-white flex items-center justify-center font-serif text-xl font-bold shadow-sm group-hover:bg-[#0e3d38] transition-colors"
+            className="w-10 h-10 rounded-xl bg-[var(--rose)] text-white flex items-center justify-center font-serif text-xl font-bold shadow-sm group-hover:bg-[var(--rose-hover)] transition-colors"
             aria-hidden="true"
           >
             H
@@ -57,7 +57,7 @@ export const Header = () => {
             <a
               key={item.id}
               href={item.href}
-              className="text-[var(--ink)] hover:text-[var(--rose)] transition-colors py-1 focus-visible:outline-2 focus-visible:outline-[var(--teal)] rounded"
+              className="text-[var(--ink)] hover:text-[var(--rose)] transition-colors py-1 focus-visible:outline-2 focus-visible:outline-[var(--rose)] rounded"
             >
               {item.label}
             </a>
@@ -68,7 +68,7 @@ export const Header = () => {
         <div className="hidden md:flex items-center gap-3">
           <a
             href="#book"
-            className="inline-flex items-center gap-2 bg-[var(--rose)] hover:bg-[#a33b49] text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-sm hover:shadow transition-all transform active:scale-95 focus-visible:outline-2 focus-visible:outline-[var(--rose)]"
+            className="inline-flex items-center gap-2 bg-[var(--rose)] hover:bg-[var(--rose-hover)] text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-sm hover:shadow transition-all transform active:scale-95 focus-visible:outline-2 focus-visible:outline-[var(--rose)]"
           >
             <span>Book Free Trial</span>
             <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -79,7 +79,7 @@ export const Header = () => {
         <button
           type="button"
           onClick={() => setMobileMenuOpen((prev) => !prev)}
-          className="md:hidden inline-flex items-center justify-center p-2 rounded-xl text-[var(--ink)] hover:bg-[var(--surface2)] focus-visible:outline-2 focus-visible:outline-[var(--teal)] transition-colors"
+          className="md:hidden inline-flex items-center justify-center p-2 rounded-xl text-[var(--ink)] hover:bg-[var(--surface2)] focus-visible:outline-2 focus-visible:outline-[var(--rose)] transition-colors"
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-navigation"
           aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
@@ -114,7 +114,7 @@ export const Header = () => {
               <a
                 href="#book"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full inline-flex items-center justify-center gap-2 bg-[var(--rose)] hover:bg-[#a33b49] text-white font-bold py-3 px-4 rounded-full shadow text-center transition-transform active:scale-98"
+                className="w-full inline-flex items-center justify-center gap-2 bg-[var(--rose)] hover:bg-[var(--rose-hover)] text-white font-bold py-3 px-4 rounded-full shadow text-center transition-transform active:scale-98"
               >
                 <span>Book Free Trial</span>
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -125,7 +125,7 @@ export const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full inline-flex items-center justify-center gap-2 bg-[var(--wa)] hover:bg-[#1b934a] text-white font-bold py-3 px-4 rounded-full shadow text-center transition-transform active:scale-98"
+                className="w-full inline-flex items-center justify-center gap-2 bg-[var(--wa)] hover:bg-[var(--wa-hover)] text-white font-bold py-3 px-4 rounded-full shadow text-center transition-transform active:scale-98"
               >
                 <MessageCircle className="w-4 h-4" aria-hidden="true" />
                 <span>Chat on WhatsApp</span>

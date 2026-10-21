@@ -45,7 +45,7 @@ export const Pricing = () => {
               aria-pressed={isMonthly}
               className={`text-xs sm:text-sm font-bold py-2 px-5 sm:px-6 rounded-full transition-all cursor-pointer ${
                 isMonthly
-                  ? 'bg-[var(--teal)] text-white shadow-xs'
+                  ? 'bg-[var(--rose)] text-white shadow-xs'
                   : 'text-[var(--muted)] hover:text-[var(--ink)]'
               }`}
             >
@@ -57,7 +57,7 @@ export const Pricing = () => {
               aria-pressed={!isMonthly}
               className={`text-xs sm:text-sm font-bold py-2 px-5 sm:px-6 rounded-full transition-all cursor-pointer flex items-center gap-1.5 ${
                 !isMonthly
-                  ? 'bg-[var(--teal)] text-white shadow-xs'
+                  ? 'bg-[var(--rose)] text-white shadow-xs'
                   : 'text-[var(--muted)] hover:text-[var(--ink)]'
               }`}
             >
@@ -88,7 +88,7 @@ export const Pricing = () => {
                 className={`flex flex-col justify-between bg-[var(--surface)] rounded-3xl p-6 sm:p-8 transition-all relative ${
                   isPop
                     ? 'border-2 border-[var(--rose)] shadow-md ring-1 ring-[var(--rose)]/20'
-                    : 'border border-[var(--line)] shadow-xs hover:border-[var(--teal)]/40 hover:shadow-sm'
+                    : 'border border-[var(--line)] shadow-xs hover:border-[var(--rose)]/30 hover:shadow-sm'
                 }`}
               >
                 {/* Popular Badge */}
@@ -113,7 +113,7 @@ export const Pricing = () => {
                   {/* Price Block */}
                   <div className="py-4 border-y border-[var(--line)]/60 mb-6">
                     <div className="flex items-baseline gap-1.5">
-                      <span className="font-serif text-3xl sm:text-4xl font-bold text-[var(--teal)]">
+                      <span className="font-serif text-3xl sm:text-4xl font-bold text-[var(--ink)]">
                         {formattedPrice}
                       </span>
                       <span className="text-xs sm:text-sm text-[var(--muted)] font-medium">
@@ -132,7 +132,7 @@ export const Pricing = () => {
                         }`}
                       >
                         {f.included ? (
-                          <div className="w-4 h-4 rounded-full bg-[var(--sage)] text-[var(--teal)] flex items-center justify-center shrink-0 mt-0.5">
+                          <div className="w-4 h-4 rounded-full bg-[var(--surface-sage)] text-[var(--sage)] flex items-center justify-center shrink-0 mt-0.5">
                             <Check className="w-3 h-3 stroke-[3]" aria-hidden="true" />
                           </div>
                         ) : (
@@ -154,7 +154,7 @@ export const Pricing = () => {
                     rel="noopener noreferrer"
                     className={`w-full inline-flex items-center justify-center gap-2 text-sm font-bold py-3.5 px-6 rounded-full transition-all active:scale-98 shadow-xs cursor-pointer ${
                       isPop
-                        ? 'bg-[var(--rose)] hover:bg-[#a33b49] text-white shadow-sm hover:shadow'
+                        ? 'bg-[var(--rose)] hover:bg-[var(--rose-hover)] text-white shadow-sm hover:shadow'
                         : 'bg-[var(--surface2)] hover:bg-[var(--line)] text-[var(--ink)] border border-[var(--line)]'
                     }`}
                   >

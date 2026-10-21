@@ -21,7 +21,7 @@ export function App() {
       {/* Accessible Skip Link */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-[var(--teal)] focus:text-white focus:top-2 focus:left-2 rounded-lg"
+        className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-[var(--rose)] focus:text-white focus:top-2 focus:left-2 rounded-lg"
       >
         Skip to main content
       </a>

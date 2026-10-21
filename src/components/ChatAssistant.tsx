@@ -125,7 +125,7 @@ export const ChatAssistant = () => {
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label="Open automated gym assistant chat"
-        className="fixed right-4 sm:right-6 bottom-20 z-40 bg-[var(--teal)] hover:bg-[#0e3d38] text-white text-xs sm:text-sm font-bold py-3 px-4 sm:px-5 rounded-full shadow-lg hover:shadow-xl transition-all flex items-center gap-2 cursor-pointer border border-white/20 active:scale-95"
+        className="fixed right-4 sm:right-6 bottom-20 z-40 bg-[var(--rose)] hover:bg-[var(--rose-hover)] text-white text-xs sm:text-sm font-bold py-3 px-4 sm:px-5 rounded-full shadow-lg hover:shadow-xl transition-all flex items-center gap-2 cursor-pointer border border-white/20 active:scale-95"
       >
         <MessageSquare className="w-4 h-4 text-[#fbeaec]" aria-hidden="true" />
         <span>Chat — Fees / Timings</span>
@@ -139,7 +139,7 @@ export const ChatAssistant = () => {
           className="fixed right-4 sm:right-6 bottom-32 z-50 w-[calc(100vw-32px)] sm:w-[360px] max-h-[500px] flex flex-col bg-[var(--surface)] border border-[var(--line)] rounded-3xl shadow-2xl overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200"
         >
           {/* Header */}
-          <div className="bg-[var(--teal)] text-white p-4 flex items-center justify-between">
+          <div className="bg-[var(--rose)] text-white p-4 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
                 <Bot className="w-4 h-4 text-white" aria-hidden="true" />
@@ -174,7 +174,7 @@ export const ChatAssistant = () => {
                 <div
                   className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-xs sm:text-sm leading-relaxed whitespace-pre-line shadow-xs ${
                     m.sender === 'user'
-                      ? 'bg-[var(--teal)] text-white rounded-br-xs'
+                      ? 'bg-[var(--rose)] text-white rounded-br-xs'
                       : 'bg-[var(--surface)] text-[var(--ink)] border border-[var(--line)] rounded-bl-xs'
                   }`}
                 >
@@ -209,11 +209,11 @@ export const ChatAssistant = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Sawal likhein (e.g. fees, timings)…"
-              className="flex-1 px-3.5 py-2 text-xs sm:text-sm rounded-full bg-[var(--bg)] border border-[var(--line)] text-[var(--ink)] focus-visible:outline-2 focus-visible:outline-[var(--teal)]"
+              className="flex-1 px-3.5 py-2 text-xs sm:text-sm rounded-full bg-[var(--bg)] border border-[var(--line)] text-[var(--ink)] focus-visible:outline-2 focus-visible:outline-[var(--rose)]"
             />
             <button
               type="submit"
-              className="w-8 h-8 rounded-full bg-[var(--rose)] hover:bg-[#a33b49] text-white flex items-center justify-center shrink-0 transition-colors cursor-pointer"
+              className="w-8 h-8 rounded-full bg-[var(--rose)] hover:bg-[var(--rose-hover)] text-white flex items-center justify-center shrink-0 transition-colors cursor-pointer"
               aria-label="Send message to assistant"
             >
               <Send className="w-3.5 h-3.5" aria-hidden="true" />
@@ -227,7 +227,7 @@ export const ChatAssistant = () => {
               href={whatsappDirectUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-bold text-[var(--teal)] hover:text-[var(--rose)] flex items-center gap-1"
+              className="font-bold text-[var(--rose)] hover:text-[var(--rose-hover)] flex items-center gap-1"
             >
               <span>WhatsApp Coach</span>
               <ExternalLink className="w-3 h-3" aria-hidden="true" />

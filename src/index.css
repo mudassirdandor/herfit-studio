@@ -1,73 +1,59 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-bg: #fdf8f2;
-  --color-brand-surface: #ffffff;
-  --color-brand-surface2: #f3ece2;
-  --color-brand-ink: #1e2a25;
-  --color-brand-muted: #5c6b64;
-  --color-brand-line: #e7ddd0;
+  --color-brand-bg: #FFFDF9;
+  --color-brand-surface: #FFFFFF;
+  --color-brand-blush: #F7ECEB;
+  --color-brand-sage-surface: #E7EEE6;
+  --color-brand-ink: #303630;
+  --color-brand-muted: #686E68;
+  --color-brand-line: #E8E5DF;
   
-  --color-brand-teal: #14544e;
-  --color-brand-teal-dark: #0e3d38;
-  --color-brand-teal-light: #1b6a63;
-  --color-brand-teal-ink: #ffffff;
+  --color-brand-rose: #C77C86;
+  --color-brand-rose-hover: #B56C76;
+  --color-brand-rose-soft: #F7ECEB;
   
-  --color-brand-rose: #bc4756;
-  --color-brand-rose-hover: #a33b49;
-  --color-brand-rose-soft: #fbeaec;
-  
-  --color-brand-sage: #e3efe8;
-  --color-brand-sage-dark: #cde2d6;
-  --color-brand-gold: #b98a2e;
-  --color-brand-wa: #1faa55;
-  --color-brand-wa-hover: #1b934a;
+  --color-brand-sage: #91A995;
+  --color-brand-sage-hover: #7E9782;
+  --color-brand-champagne: #B89568;
+  --color-brand-champagne-hover: #A58357;
 
   --font-serif: "DM Serif Display", Georgia, serif;
   --font-sans: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  --shadow-brand: 0 10px 30px rgba(30, 42, 37, 0.08);
-  --shadow-card: 0 12px 32px rgba(20, 84, 78, 0.07);
+  --shadow-soft: 0 4px 20px rgba(48, 54, 48, 0.04);
+  --shadow-card: 0 8px 30px rgba(48, 54, 48, 0.06);
+  --shadow-elevated: 0 14px 40px rgba(48, 54, 48, 0.08);
 }
 
 :root {
-  --bg: #fdf8f2;
-  --surface: #ffffff;
-  --surface2: #f3ece2;
-  --ink: #1e2a25;
-  --muted: #5c6b64;
-  --line: #e7ddd0;
-  --teal: #14544e;
-  --teal-ink: #ffffff;
-  --rose: #bc4756;
-  --rose-soft: #fbeaec;
-  --sage: #e3efe8;
-  --gold: #b98a2e;
-  --wa: #1faa55;
-  --radius: 18px;
-  --shadow: 0 10px 30px rgba(30, 42, 37, 0.08);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #101613;
-    --surface: #18211c;
-    --surface2: #1f2a23;
-    --ink: #f0ebe2;
-    --muted: #a7b5ac;
-    --line: #2c3a32;
-    --teal: #2e7d6f;
-    --rose: #e07a87;
-    --rose-soft: #332227;
-    --sage: #1d2f26;
-    --gold: #d9ab4e;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  }
+  --bg: #FFFDF9;
+  --surface: #FFFFFF;
+  --surface2: #F7ECEB;
+  --surface-sage: #E7EEE6;
+  --ink: #303630;
+  --muted: #686E68;
+  --line: #E8E5DF;
+  
+  --rose: #C77C86;
+  --rose-hover: #B56C76;
+  --rose-soft: #F7ECEB;
+  
+  --sage: #91A995;
+  --sage-soft: #E7EEE6;
+  --champagne: #B89568;
+  --wa: #2E8B57;
+  --wa-hover: #267347;
+  
+  --radius: 20px;
+  --shadow: 0 8px 30px rgba(48, 54, 48, 0.06);
 }
 
 html {
   scroll-behavior: smooth;
   font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
 }
 
 body {
@@ -86,6 +72,7 @@ h1, h2, h3, h4 {
   font-family: "DM Serif Display", Georgia, serif;
   font-weight: 400;
   line-height: 1.15;
+  color: var(--ink);
 }
 
 /* Accessible focus ring */
@@ -93,7 +80,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible {
-  outline: 2px solid var(--teal);
+  outline: 2px solid var(--rose);
   outline-offset: 2px;
 }
 

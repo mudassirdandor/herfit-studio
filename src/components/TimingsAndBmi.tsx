@@ -113,7 +113,7 @@ export const TimingsAndBmi = () => {
           <div className="lg:col-span-6 bg-[var(--surface)] border border-[var(--line)] rounded-3xl p-6 sm:p-8 shadow-xs flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-[var(--sage)] text-[var(--teal)] flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-[var(--surface-sage)] text-[var(--sage)] flex items-center justify-center">
                   <Clock className="w-5 h-5" aria-hidden="true" />
                 </div>
                 <div>
@@ -134,13 +134,13 @@ export const TimingsAndBmi = () => {
                     className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 p-3.5 rounded-xl bg-[var(--surface2)]/50 border border-[var(--line)]/60"
                   >
                     <div className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-[var(--teal)] shrink-0" />
+                      <span className="w-2 h-2 rounded-full bg-[var(--champagne)] shrink-0" />
                       <span className="text-sm font-semibold text-[var(--ink)]">
                         {slot.label}
                       </span>
                     </div>
                     <div className="flex items-center gap-2 self-start sm:self-auto pl-4 sm:pl-0">
-                      <span className="text-sm font-bold text-[var(--teal)]">
+                      <span className="text-sm font-bold text-[var(--champagne)]">
                         {slot.time}
                       </span>
                       {slot.tag && (
@@ -153,8 +153,8 @@ export const TimingsAndBmi = () => {
                 ))}
               </div>
 
-              <div className="p-3.5 rounded-xl bg-[var(--sage)]/50 border border-[var(--teal)]/20 text-xs text-[var(--ink)] leading-relaxed mb-8">
-                <span className="font-bold text-[var(--teal)]">Studio Policy: </span>
+              <div className="p-3.5 rounded-xl bg-[var(--surface-sage)] border border-[var(--line)] text-xs text-[var(--ink)] leading-relaxed mb-8">
+                <span className="font-bold text-[var(--ink)]">Studio Policy: </span>
                 {timings.policyNote}
               </div>
             </div>
@@ -222,7 +222,7 @@ export const TimingsAndBmi = () => {
                     value={weight}
                     onChange={(e) => setWeight(e.target.value)}
                     placeholder="e.g. 68"
-                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium focus-visible:outline-2 focus-visible:outline-[var(--teal)] transition-colors text-sm"
+                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium focus-visible:outline-2 focus-visible:outline-[var(--rose)] transition-colors text-sm"
                   />
                 </div>
 
@@ -243,7 +243,7 @@ export const TimingsAndBmi = () => {
                     value={height}
                     onChange={(e) => setHeight(e.target.value)}
                     placeholder="e.g. 162"
-                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium focus-visible:outline-2 focus-visible:outline-[var(--teal)] transition-colors text-sm"
+                    className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] text-[var(--ink)] font-medium focus-visible:outline-2 focus-visible:outline-[var(--rose)] transition-colors text-sm"
                   />
                 </div>
               </div>
@@ -261,7 +261,7 @@ export const TimingsAndBmi = () => {
               <div className="flex items-center gap-3 pt-2">
                 <button
                   type="submit"
-                  className="flex-1 inline-flex items-center justify-center gap-2 bg-[var(--teal)] hover:bg-[#0e3d38] text-white font-bold py-3 px-5 rounded-full shadow-xs hover:shadow transition-all active:scale-98 text-sm cursor-pointer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 bg-[var(--rose)] hover:bg-[var(--rose-hover)] text-white font-bold py-3 px-5 rounded-full shadow-xs hover:shadow transition-all active:scale-98 text-sm cursor-pointer"
                 >
                   <span>Calculate My BMI</span>
                 </button>
@@ -290,7 +290,7 @@ export const TimingsAndBmi = () => {
                     <span className="text-xs uppercase font-bold tracking-wider text-[var(--muted)]">
                       Calculated BMI:
                     </span>
-                    <span className="font-serif text-3xl font-bold text-[var(--teal)] leading-none">
+                    <span className="font-serif text-3xl font-bold text-[var(--ink)] leading-none">
                       {result.score}
                     </span>
                   </div>
@@ -316,7 +316,7 @@ export const TimingsAndBmi = () => {
                     href={trialUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--teal)] hover:text-[var(--rose)] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--rose)] hover:text-[var(--rose-hover)] transition-colors"
                   >
                     <span>Discuss Plan on WhatsApp</span>
                     <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
